@@ -18,7 +18,7 @@ export default function MovieForm() {
 
   const fetchMovie = async (query) => {
     const res = await fetch(
-      `http://localhost:3000/api/movies?query=${encodeURIComponent(query)}`
+      `divine-fascination-production-9ca2.up.railway.app/api/movies?query=${encodeURIComponent(query)}`
     );
     if (!res.ok) throw new Error(`HTTP error! ${res.status}`);
     const data = await res.json();
