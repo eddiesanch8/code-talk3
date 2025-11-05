@@ -47,6 +47,17 @@ export default function MovieForm() {
       );
     }
 
+
+        // Check if no movies found
+    if (Array.isArray(result) && result.length === 0) {
+      return (
+        <div key={index} className="result-item error">
+          <h3>Result {index + 1}</h3>
+          <p className="error-message">No movies found</p>
+        </div>
+      );
+    }
+
     // Display movies
     return (
       <div key={index} className="result-item success">
